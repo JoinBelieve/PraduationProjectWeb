@@ -1,0 +1,11 @@
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="main" extends="struts-default" namespace="/pages" >
+		<action method="{1}UserAction" class="com.beli.action.UserAction" name="*UserAction">
+			<result name="success">login.jsp</result>
+		</action>
+	</package>
+</struts>
