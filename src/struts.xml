@@ -6,6 +6,7 @@
 	<package name="main" extends="struts-default" namespace="/pages" >
 		<action method="{1}UserAction" class="com.beli.action.UserAction" name="*UserAction">
 			<result name="success">login.jsp</result>
+			<result name="loginSeccuss">index.jsp</result>
 		</action>
 	</package>
 </struts>
