@@ -99,6 +99,7 @@ public class BaseDao<T> {
 		}
 	}
 	public Number getNum(String hql){
+		System.out.println("aaaa");
 //		
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {

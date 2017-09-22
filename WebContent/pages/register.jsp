@@ -69,13 +69,14 @@ function IUserFunction(){
 		<h1>Smile宠物论坛</h1>
 		<p>欢迎您</p>
 		<p class="login">注册界面</p>
+		
 			<form id="form" method="post" action="registerUserAction" onsubmit="return checkForm()" >		
 				<input id="user" type="text"  name="user.u_name" placeholder="用户名(至少2位数)" size="20" onblur="IUserFunction()"/><br><span id="user_help" class="help"></span><br>
 				<input id="pwd"  type="password" name="user.pwd"  placeholder="密码(至少6位数)" size="20" onblur="IpwdFunction()"/><br><span id="pwd_help" class="help"></span><br>
 				<input id="submit" type="submit"  value="注册">
 			</form>	
 			<div id="div_bottom">
-				<a href="login.jsp">返回登录页面</a>	&nbsp;&nbsp;&nbsp;
+				<a href="index.jsp">返回登录页面</a>	&nbsp;&nbsp;&nbsp;
 				<a href="">管理员登录</a>
 			</div>		
 	</div>

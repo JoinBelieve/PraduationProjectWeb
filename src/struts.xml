@@ -3,10 +3,32 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
+	
 	<package name="main" extends="struts-default" namespace="/pages" >
+		
+		<interceptors>
+			<interceptor name="MyInterceptor" class="com.beli.interceptor.AuthInterceptor"></interceptor>
+			<interceptor-stack name="defaultInterceptorStack">
+				<interceptor-ref name="MyInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>	
+			</interceptor-stack>			
+		</interceptors>
+		
+		<default-interceptor-ref name="defaultInterceptorStack"></default-interceptor-ref>
+		
+		<global-results>
+			<result name="loginSeccuss">mainpage.jsp</result>
+			<result name="login">index.jsp</result>
+		</global-results>
+		
 		<action method="{1}UserAction" class="com.beli.action.UserAction" name="*UserAction">
-			<result name="success">login.jsp</result>
-			<result name="loginSeccuss">index.jsp</result>
+			<!-- 注册成功 -->
+			<result name="success">index.jsp</result>
+			
+			<!-- <result name="error">register.jsp</result> -->			
+		</action>
+		<action name="*MessageAction" class="com.beli.action.MessageAction" method="{1}MessageAction">
+				<result name="addMessage">mainpage.jsp</result>				
 		</action>
 	</package>
 </struts>

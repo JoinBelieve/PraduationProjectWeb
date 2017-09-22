@@ -24,16 +24,18 @@ body{
 	position: relative;
 	left:10px
 }
-#head_ul{
+#head_ul{ 
 	margin:0px;
+	padding:0px;
 	list-style: none;
 	line-height:50px;	
 	position: absolute;
 	left:0px;
+	
 }
 .head_li{	
-	padding:0px;
-	float: left;	
+
+	display: inline-block;
 }
 .head_li:hover{
 	background-color:#fefefe;
@@ -50,28 +52,69 @@ body{
 }
 
 #head_div2{
+    margin: 0;
+    padding: 0;
 	display:inline;
 	position: absolute;
-	right:0px;
+	right:50px;
 	top: 0px;
-}
-
-#head_div2 ul{
-	list-style: none;	
-}
-#head_div2 li{
-	float:left;
-	display: block;
-	width: 50px;
+	height: 50px;
+	width: 150px;
 	
+	cursor: pointer;
 }
-#head_div2 li a{	
-	text-align:center;
-	text-decoration: none;  	
+#head_div2:hover{
+    background:#eee;
+    opacity: 0.8;
 }
-#head_div2 li a:hover{
-	background-color:#c0c0c0;
-	opacity:0.5;
+#head_div2 .cdiv1 img{    
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    
+}
+#head_div2 .cdiv1 p{    
+    position: absolute;
+    left:45px;
+    top: 0px;
+}
+.cdiv2{
+    z-index: 1;
+    position: absolute;
+    right:100px;
+    top: 50px;
+    width: 110px;
+    height: 123px;
+    border: 1px solid #EEEEEE;    
+    background: #fff;
+    display:none;
+    
+}
+.cdiv2 ul{
+  
+   margin: 0;
+   padding: 0;
+   list-style: none;    
+}
+.cdiv2 ul li{   
+    text-align: center;
+    
+}
+.cdiv2 ul li a{
+    padding-top: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    display: block;
+    width: 110px;
+    height: 28px;
+    
+}
+.cdiv2 ul li a:hover{
+    color: blue;
+    background: #EEEEEE;
 }
 /*
  * 未访问的链接
@@ -83,7 +126,7 @@ body{
  * 已访问的链接
  */
 #head_div2 li a:visited{
-    color: #00ffFF;
+    color: #0000FF;
 }
 
 
