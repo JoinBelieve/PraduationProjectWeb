@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-9-20 16:06:18 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.beli.pojo.Message" table="MESSAGE">
+        <id name="m_id" type="int">
+            <column name="M_ID" />
+            <generator class="increment" />
+        </id>
+        <property name="title" type="java.lang.String">
+            <column name="TITLE" />
+        </property>
+        <property name="type" type="java.lang.String">
+            <column name="TYPE" />
+        </property>
+        <property name="content" type="java.lang.String">
+            <column name="CONTENT" />
+        </property>
+        <property name="time" type="java.lang.String">
+            <column name="TIME" />
+        </property>
+        <property name="u_name" type="java.lang.String">
+            <column name="U_NAME" />
+        </property>
+    </class>
+</hibernate-mapping>
