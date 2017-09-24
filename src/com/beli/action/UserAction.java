@@ -14,6 +14,7 @@ import org.apache.struts2.interceptor.ServletResponseAware;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.beli.dao.BaseDao;
+import com.beli.pojo.Message;
 import com.beli.pojo.User;
 import com.beli.util.MD5Util;
 import com.opensymphony.xwork2.ActionSupport;
@@ -31,8 +32,14 @@ public class UserAction extends ActionSupport implements ServletRequestAware,Ser
 	private HttpServletResponse response;
 	private HttpServletRequest request;
 	private Map<String, Object> session;
-	
+	private List<Message> list;
 
+	public List<Message> getList() {
+		return list;
+	}
+	public void setList(List<Message> list) {
+		this.list = list;
+	}
 	//	用户注册
 	public String registerUserAction() throws IOException{
 		response.setContentType("text/html;charset=UTF-8");
@@ -74,10 +81,19 @@ public class UserAction extends ActionSupport implements ServletRequestAware,Ser
 		System.out.println("list_size="+count);
 		System.out.println(list.toString());
 		if (count >= 1) {
-			System.out.println("2");
+			
 //			out.println("<script>alert('登录成功');window.location.href='index.jsp';</script>");
 			session.put("loginUserName",username);
-			return "loginSeccuss";
+			list = dao.selectAll(" from Message");
+			if (!list.isEmpty()) {
+				System.out.println("查询成功");
+				System.err.println(list.toString());	
+				session.put("MessageList", list);
+				return "loginSeccuss";
+			}else {
+				System.out.println("查询结果为空");
+			}
+			
 		}else if(count==0) {
 			//没有找到
 			out.println("<script>alert('用户名不存在,请先注册');window.location.href='index.jsp';</script>");

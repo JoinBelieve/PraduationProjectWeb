@@ -37,7 +37,7 @@ public class BaseDao<T> {
 		try {
 			session.beginTransaction();
 			System.out.println("select");
-			System.out.println("list.size="+session.createQuery(hql).list().size());
+//			System.out.println("list.size="+session.createQuery(hql).list().size());
 			return session.createQuery(hql).list();
 		} finally {
 			

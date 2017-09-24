@@ -23,12 +23,12 @@
 		
 		<action method="{1}UserAction" class="com.beli.action.UserAction" name="*UserAction">
 			<!-- 注册成功 -->
-			<result name="success">index.jsp</result>
-			
+			<result name="success">index.jsp</result>			
 			<!-- <result name="error">register.jsp</result> -->			
 		</action>
 		<action name="*MessageAction" class="com.beli.action.MessageAction" method="{1}MessageAction">
-				<result name="addMessage">mainpage.jsp</result>				
+				<result name="addMessage">mainpage.jsp</result>		
+				<result name="SelectMessageAllSuccess">mainpage.jsp</result>		
 		</action>
 	</package>
 </struts>

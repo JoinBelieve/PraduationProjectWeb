@@ -52,7 +52,7 @@ $(document).ready(function(){
 				}else {
 					console.log(flag+"可以提交了");
 					$("#form").submit();
-					alert("发布成功");
+					
 				}				
 			}
 			else{
