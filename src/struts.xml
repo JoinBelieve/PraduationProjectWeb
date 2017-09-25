@@ -20,7 +20,7 @@
 			<result name="loginSeccuss">mainpage.jsp</result>
 			<result name="login">index.jsp</result>
 		</global-results>
-		
+		<!-- Web端 -->
 		<action method="{1}UserAction" class="com.beli.action.UserAction" name="*UserAction">
 			<!-- 注册成功 -->
 			<result name="success">index.jsp</result>			
@@ -28,7 +28,21 @@
 		</action>
 		<action name="*MessageAction" class="com.beli.action.MessageAction" method="{1}MessageAction">
 				<result name="addMessage">mainpage.jsp</result>		
-				<result name="SelectMessageAllSuccess">mainpage.jsp</result>		
-		</action>
+				<result name="SelectMessageAllSuccess">mainpage.jsp</result>	
+				<result name="selectOneMessage">mainpageinfo.jsp</result>	
+		</action>	
+		<!-- Android端 -->
+		<action name="UserRegisterActionByJson" method="UserRegisterActionByJson"
+				class="com.beli.action.UserActionByJson"></action>
+			
+		<action name="UserLoginActionByJson" method="UserLoginActionByJson"
+				class="com.beli.action.UserActionByJson"></action>
+		<action name="addMessageActionByJson" method="addMessageActionByJson" 
+			class="com.beli.action.MessageActionByJson"></action>
+		<action name="selectAllMessageActionByJson" method="selectAllMessageActionByJson" 
+			class="com.beli.action.MessageActionByJson"></action>
+			<action name="selectOneMessageActionByJson" method="selectOneMessageActionByJson" 
+			class="com.beli.action.MessageActionByJson"></action>
 	</package>
+	
 </struts>

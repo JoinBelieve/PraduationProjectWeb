@@ -20,20 +20,26 @@ public class AuthInterceptor extends AbstractInterceptor {
 		Map<String, Object> session = context.getSession();
 		// TODO Auto-generated method stub
 		String actionName = invocation.getProxy().getActionName();
-		if (actionName.equals("loginUserAction")||actionName.equals("registerUserAction")) {
-			System.out.println("拦截器说:用户正在登录或者注册操作,所以我不拦截它们两个:loginUserAction和registerUserAction");
+//		if (actionName.equals("loginUserAction")||actionName.equals("registerUserAction")
+//				||actionName.equals("UserRegisterActionByJson")||actionName.equals("UserLoginActionByJson")
+//				||actionName.equals("addMessageActionByJson")) {
+//			
+//		}
+		if (actionName.equals("addMessageAction")) {
+			if (session.get("loginUserName") != null) {
+				//			有用户登录
+				System.out.println("拦截器说:有用户登录");
+				String result = invocation.invoke();
+				return result;
+			}else {//说明用户没登录
+				System.out.println("拦截器说:用户没登录,我要拦截它们,要进行登录哦");
+				return "login";
+			}
+		}else {
+			System.out.println("拦截器说:不是我要拦截的ACTION,放行...");
 			return invocation.invoke();
 		}
-
-		if (session.get("loginUserName") != null) {
-			//			有用户登录
-			System.out.println("拦截器说:有用户登录");
-			String result = invocation.invoke();
-			return result;
-		}else {//说明用户没登录
-			System.out.println("拦截器说:用户没登录,我要拦截它们,要进行登录哦");
-			return "login";
-		}
+			
 		
 	}
 
