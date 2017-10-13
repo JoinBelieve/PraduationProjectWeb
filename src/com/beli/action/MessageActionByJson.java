@@ -73,24 +73,26 @@ public class MessageActionByJson extends ActionSupport implements ServletRespons
 		
 		List<Message> list = dao.selectAll(" from Message");
 		System.out.println(list.toString());
-		if (!list.isEmpty()) {
+//		if (!list.isEmpty()) {
 //			查询成功
 			System.out.println("查询成功");
 			dataMap.put("code_error", "0");
 			dataMap.put("status", "success");
 			dataMap.put("messages", list);
 			out.print(gson.toJson(dataMap));
-		}else {
-//			查询没有结果
-			System.out.println("没有查询结果");
-			dataMap.put("code_error", "-1");
-			dataMap.put("status", "error");		
-			out.print(gson.toJson(dataMap));
-		}
+//		}else {
+////			查询没有结果
+//			System.out.println("没有查询结果");
+//			dataMap.put("code_error", "-1");
+//			dataMap.put("status", "error");		
+//			out.print(gson.toJson(dataMap));
+//		}
 		out.flush();
 		out.close();
 		return null;
 	}
+	
+//	查询一个论坛信息	
 	public String selectOneMessageActionByJson() throws IOException{
 		response.setContentType("text/html;charset=UTF-8");
 		response.setCharacterEncoding("UTF-8");
@@ -111,7 +113,6 @@ public class MessageActionByJson extends ActionSupport implements ServletRespons
 		out.close();
 		return null;
 	}
-	
 	public BaseDao<Message> getDao() {
 		return dao;
 	}

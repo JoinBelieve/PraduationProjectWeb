@@ -42,7 +42,12 @@ public class UserActionByJson extends ActionSupport implements ServletRequestAwa
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter(); 
 		dataMap = new HashMap<String,Object>();
-		user.setPwd(MD5Util.getMd5String(user.getPwd()));
+		String username = request.getParameter("name");
+		String pwd = request.getParameter("pwd");
+		user = new User();
+		System.out.println(username+"-"+pwd);
+		user.setU_name(username);
+		user.setPwd(MD5Util.getMd5String(pwd));
 		Number num = dao.getNum("select count(*) from User u where u.u_name='" + user.getU_name() + "'");
 		System.out.println("num=" + num);
 		int count = num.intValue();
@@ -70,20 +75,28 @@ public class UserActionByJson extends ActionSupport implements ServletRequestAwa
 		PrintWriter out = response.getWriter(); 
 		dataMap = new HashMap<String,Object>();
 		Gson gson = new Gson();
-		user.setPwd(MD5Util.getMd5String(user.getPwd()));
-		List<User> list = dao.search(
-				" from User u where u.u_name='" + user.getU_name() + "' and u.pwd ='" + user.getPwd() + "'");
-		int count = list.size();
-		if (count >= 1) {
-			dataMap.put("error_code", 0);
-			dataMap.put("statas", "success");
-			dataMap.put("user", user);			
-			out.print(gson.toJson(dataMap));
-		} else {
-			dataMap.put("error_code", -1);
-			dataMap.put("statas", "error");
-			out.print(gson.toJson(dataMap));
-		}
+		user = new User();
+		String name = request.getParameter("name");
+		String pwd = request.getParameter("pwd");
+		System.out.println(name+"-"+pwd);
+		user.setPwd(MD5Util.getMd5String(pwd));
+		user.setU_name(name);	
+			List<User> list = dao.search(
+					" from User u where u.u_name='" + user.getU_name() + "' and u.pwd ='" + user.getPwd() + "'");
+			int count = list.size();
+			if (count >= 1) {
+				System.out.println("登录成功");
+				dataMap.put("code_error", 0);
+				dataMap.put("statas", "success");
+				dataMap.put("user", user);			
+				out.print(gson.toJson(dataMap));
+			} else if (count == 0) {
+				System.out.println("账号不存在");
+				dataMap.put("code_error", -1);
+				dataMap.put("statas", "error");
+				out.print(gson.toJson(dataMap));
+			}
+				
 		return null;
 	}
 	

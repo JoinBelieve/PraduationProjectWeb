@@ -101,6 +101,40 @@ public class UserAction extends ActionSupport implements ServletRequestAware,Ser
 
 		return null;
 	}
+	
+//	管理员的功能
+//	删除用户
+	public String deleteUserAction() throws IOException{	
+//		获得要删除用户的ID
+		response.setContentType("text/html;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		int id = Integer.parseInt(request.getParameter("id"));
+		System.out.println(id);
+		User user = dao.selectOne(User.class, id);
+		boolean flag = dao.delete(user);
+		if (flag) {
+//			删除成功
+			System.out.println("删除成功");
+		}else {
+//			删除失败
+			System.out.println("删除失败");
+		}
+		return null;
+	}	
+//	修改用户
+	public String updataUserAction(){
+		return null;
+	}
+//	查询全部用户
+	public String selectAllUserAction(){
+		response.setContentType("text/html;charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		List<User> list = dao.selectAll(" from User");
+		System.out.println(list.toString());
+		session.put("userList", list);
+		return "selectAllUser";
+	}
+	
 	public User getUser() {
 		return user;
 	}

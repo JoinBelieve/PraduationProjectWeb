@@ -42,6 +42,8 @@
 </div>
 
 <div id="title">
+	<!-- 轮播图 -->
+	<div id="dImg"></div>
 	<div id="title_inner">
 		<ul>
 			<li><a href="#">最新</a></li>
@@ -61,10 +63,17 @@
 					i++;
 					
 					out.write(
-				"<div>"+
+				"<div class='mDiv'>"+
 					"<p class='huati'>来自话题:"+m.getType()+"</p>"+
 							"<span class='head_title'>"+m.getTitle()+"</span><br>"+
-						"<p class='head_p'><img class='head_img'src='img/headimg.png'/>"+"&nbsp;&nbsp;<span class='cUserName'>"+m.getU_name()+"</p>"+					
+						"<div class='head_p'>"+
+							"<div class='cIu'>"+
+								"<img class='head_img'src='img/headimg.png'/>"+
+							"</div>"+
+							"<div class='cIu'>"+			
+								"<span class='cUserName'>"+m.getU_name()+"</span>"+
+							"</div>"+
+						"</div>"+					
 						"<p id='centent"+i+"' class='centent'>"+m.getContent()+"</p><a id='showall' href='SelectOneMessageAction?message.m_id="+m.getM_id()+"'>查看全文</a>"+
 					"<span class='ping'>评论(个数)&nbsp;&nbsp;&nbsp;"+m.getTime()+"</span>"+
 						
@@ -72,15 +81,22 @@
 				}
 				
 			%>
-			<!-- 
-			<div>
+			
+			<div class="mDiv">
 				<p class="huati">来自话题:</p>
-				<span class="head_title">标题</span><br>
-				<img class="head_img" src="img/headimg.png"/><span class="cUserName">&nbsp;用户名</span>&nbsp;&nbsp;
+				<span class="head_title">我是模板</span>
+				<div class="head_p">
+					<div class="cIu">
+						<img class="head_img" src="img/headimg.png"/>
+					</div>
+					<div class="cIu">
+						<span class="cUserName">用户名</span>
+					</div>				
+				</div>
 				<p class="centent">内容</p>
 				<span class="ping">评论(个数)&nbsp;&nbsp;&nbsp;时间</span>				
 			</div>
-			 -->
+			
 		</div>
 		
 	
@@ -88,20 +104,19 @@
 	<div id="title_in_right">
 		<div id="title_right">
 			<div>
-				<img alt="收藏" src="img/shoucang.png" width="45px" height="45px"><br>
-				<span style="font-size: 15px;font-family: sans-serif;">我的收藏</span>
+				<img alt="收藏" src="img/shoucang.png" width="30px" height="30px"><br>
+				<span style="font-size: 13px;font-family: sans-serif;"><a href='#'>我的收藏</a></span>
 			</div>		
 			<div>
-				<img alt="关注" src="img/guanzhu.png" width="45px" height="45px"><br>
-				<span style="font-size: 15px;font-family: sans-serif;">我的关注</span>
+				<img alt="关注" src="img/guanzhu.png" width="30px" height="30px"><br>
+				<span style="font-size: 13px;font-family: sans-serif;"><a href='#'>我的关注</a></span>
 			</div>	
 			<div>
-				<img alt="反馈建议" src="img/jianyifankui.png" width="45px" height="45px"><br>
-				<span style="font-size: 15px;font-family: sans-serif;">反馈建议</span>
+				<img alt="反馈建议" src="img/jianyifankui.png" width="30px" height="30px"><br>
+				<span style="font-size: 13px;font-family: sans-serif;"><a href='#'>反馈建议</a></span>
 			</div>		
 			
 		</div>
-		<div></div>
 	</div>
 </div>
 

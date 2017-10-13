@@ -31,6 +31,13 @@
 				<result name="SelectMessageAllSuccess">mainpage.jsp</result>	
 				<result name="selectOneMessage">mainpageinfo.jsp</result>	
 		</action>	
+		
+		<!-- Web端管理员 -->
+		<action name="delectUser" class="com.beli.action.UserAction" method="deleteUserAction"></action>
+		<action name="selectUser" class="com.beli.action.UserAction" method="selectAllUserAction">
+			
+		</action>
+		
 		<!-- Android端 -->
 		<action name="UserRegisterActionByJson" method="UserRegisterActionByJson"
 				class="com.beli.action.UserActionByJson"></action>

@@ -75,10 +75,7 @@ public List<Message> getList() {
 //	根据id查找一个的论坛信息
 	public String SelectOneMessageAction() throws IOException{
 		response.setContentType("text/html;charset=UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		PrintWriter out = response.getWriter();  
-		Gson gson = new Gson();
-		
+		response.setCharacterEncoding("UTF-8");		
 		int id = message.getM_id();
 		System.out.println(id);
 		Message message = (Message) dao.selectOne(Message.class, id);
@@ -87,6 +84,22 @@ public List<Message> getList() {
 			session.put("message", message);
 		}
 		return "selectOneMessage";
+	}
+	
+
+//	删除论坛信息
+	public String deleteMessageAction() throws IOException{
+//		获取id
+		request.setCharacterEncoding("utf-8");
+		int id = Integer.parseInt(request.getParameter("id"));
+		Message msg = dao.selectOne(Message.class, id);
+		boolean flag = dao.delete(msg);
+		if (flag) {
+//			删除成功
+		}else {
+//			删除失败
+		}
+		return null;
 	}
 	
 	public Message getMessage() {
