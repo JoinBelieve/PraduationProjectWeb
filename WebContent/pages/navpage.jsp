@@ -6,6 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="style/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="style/navstyle.css">
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/navpagejs.js"></script>
 <title>Insert title here</title>
 
 </head>
@@ -15,7 +18,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
                     <!-- start logo -->
                     <a class="branding" href="http://www.ghostchina.com" title="Smile宠物社区"><img src="img/dog-small.png" alt="Smile宠物社区" class="img-responsive center-block"></a>
                     <!-- end logo -->
@@ -26,28 +28,51 @@
     <!-- start nav -->
     <nav class="navbar navbar-default">
     	<div class="container-fluid">
-    		<div class="container">
-    			<div class="row">
-    				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-    					<div class="navbar-header">
-    						<a href="#" class="navbar-brand">SmilePetBBS</a>
-    					</div>
-    				</div>
-    				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
-	    				<div class="collapse navbar-collapse">
-				    		<ul class="nav navbar-nav">
-				    			<li role="presentation"><a href="#">萌宠</a></li>
-				    			<li role="presentation"><a href="#">论坛</a></li>
-				    			<li role="presentation"><a href="#">下载</a></li>
-				    			<li role="presentation"><a href="#">关于</a></li>
-				    		</ul>
-			    		</div>
-    				</div>		    		
-    			</div>
-    		</div>    		
+    		<div class="navbar-header">
+    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					 <span class="sr-only">Toggle navigation</span>
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+				</button>
+    			<a href="#" class="navbar-brand">SmilePetBBS</a>
+    		</div>    	
+    		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    		
+    			<ul class="nav navbar-nav">
+					<li><a href="#">宠物百科</a></li>
+					<li><a href="#">社区</a></li>
+					<li><a href="#">下载</a></li>
+					<li><a href="#">关于</a></li>
+				</ul>    					
+		</div>    	    				
     	</div>
     </nav> 
     <!-- stop nav -->
+    <!-- 轮播图开始 -->
+    <div class="container-fluid">
+    	<div class="row">
+	    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			    <div class="banner">
+			    	<ul class="img">
+			    		<li><a href="#"><img src="img/dog1.jpg"></a></li>
+			    		<li><a href="#"><img src="img/dog2.jpg"></a></li>
+			    		<li><a href="#"><img src="img/dog3.jpg"></a></li>
+			    		<li><a href="#"><img src="img/dog4.jpg"></a></li>
+			    	</ul>
+			    	<ul class="num">
+			    		<li></li>
+			    		<li></li>
+			    		<li></li>
+			    		<li></li>
+			    	</ul>
+			 		<div class="btn btn-l"><</div>
+			 		<div class="btn btn-r">></div>
+			    </div>
+	    	</div>
+    	</div>    	
+    </div>
+    
+    <!-- 轮播图结束 -->
     <!-- start main content -->
     <article id=108 class="post">
 	    <div class="post-head">
@@ -66,13 +91,46 @@
 
 	    <footer class="post-footer clearfix">
 	        <div class="pull-left tag-list">
-	            <i class="fa fa-folder-open-o"></i>
-	            
+	            <i class="fa fa-folder-open-o"></i>	            
 	        </div>
 	        <div class="pull-right share">
 	        </div>
 	    </footer>
 	</article>
+	<div class="container">
+		<div class="row">
+		  <div class="col-sm-6 col-md-4">
+		    <div class="thumbnail">
+		      <img src="..." alt="...">
+		      <div class="caption">
+		        <h3>Thumbnail label</h3>
+		        <p>...</p>
+		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-6 col-md-4">
+		    <div class="thumbnail">
+		      <img src="..." alt="...">
+		      <div class="caption">
+		        <h3>Thumbnail label</h3>
+		        <p>...</p>
+		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-6 col-md-4">
+		    <div class="thumbnail">
+		      <img src="..." alt="...">
+		      <div class="caption">
+		        <h3>Thumbnail label</h3>
+		        <p>...</p>
+		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
     <!-- stop main content -->
 </body>
 </html>
