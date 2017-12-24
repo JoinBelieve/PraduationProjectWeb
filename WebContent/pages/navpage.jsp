@@ -6,11 +6,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="style/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="style/navstyle.css">
+<link rel="stylesheet" type="text/css" href="google_lobster/Lobster.css">
 <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/navpagejs.js"></script>
 <title>Insert title here</title>
-
+<style>
+	.main_content{
+		margin-top:100px;
+	}
+	.navbar-brand{
+		font-family:Lobster;
+	}
+</style>
 </head>
 <body>
 <!-- start header -->
@@ -40,16 +48,16 @@
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    		
     			<ul class="nav navbar-nav">
 					<li><a href="#">宠物百科</a></li>
-					<li><a href="#">社区</a></li>
+					<li><a href="main_bbs.jsp">社区</a></li>
 					<li><a href="#">下载</a></li>
 					<li><a href="#">关于</a></li>
 				</ul>    					
-		</div>    	    				
+			</div>    	    				
     	</div>
     </nav> 
     <!-- stop nav -->
     <!-- 轮播图开始 -->
-    <div class="container-fluid">
+    <div class="container-fluid ">
     	<div class="row">
 	    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			    <div class="banner">
@@ -59,78 +67,85 @@
 			    		<li><a href="#"><img src="img/dog3.jpg"></a></li>
 			    		<li><a href="#"><img src="img/dog4.jpg"></a></li>
 			    	</ul>
-			    	<ul class="num">
-			    		<li></li>
-			    		<li></li>
-			    		<li></li>
-			    		<li></li>
-			    	</ul>
+			    	<ul class="num"></ul>
 			 		<div class="btn btn-l"><</div>
 			 		<div class="btn btn-r">></div>
 			    </div>
 	    	</div>
     	</div>    	
     </div>
-    
     <!-- 轮播图结束 -->
-    <!-- start main content -->
-    <article id=108 class="post">
-	    <div class="post-head">
-	        <h1 class="post-title"><a href="/custom-excerpts/">自定义文章摘要（Excerpt）</a></h1>
-	        <div class="post-meta">
-	            <span class="author">作者：<a href="/author/wangsai/">王赛</a></span> &bull;
-	            <time class="post-date" datetime="2017年8月9日星期三下午4点57分" title="2017年8月9日星期三下午4点57分">2017年8月9日</time>
-	        </div>
-	    </div>
-	    <div class="post-content">
-	        <p>随着 Ghost 1.0 和 Hemingway Mode 的发布，今天我们又发布了“自定义文章摘要”功能。 默认情况下，Ghost 会截取文章正文开头部分的文字（一般是55个字）作为文章摘要并显示在文章归档列表中。摘要有助于读者快速了解文章所要表达的内容。但是，如果你希望自己定</p>
-	    </div>
-	    <div class="post-permalink">
-	        <a href="/custom-excerpts/" class="btn btn-default">阅读全文</a>
-	    </div>
-
-	    <footer class="post-footer clearfix">
-	        <div class="pull-left tag-list">
-	            <i class="fa fa-folder-open-o"></i>	            
-	        </div>
-	        <div class="pull-right share">
-	        </div>
-	    </footer>
-	</article>
-	<div class="container">
-		<div class="row">
-		  <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="..." alt="...">
-		      <div class="caption">
-		        <h3>Thumbnail label</h3>
-		        <p>...</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="..." alt="...">
-		      <div class="caption">
-		        <h3>Thumbnail label</h3>
-		        <p>...</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="..." alt="...">
-		      <div class="caption">
-		        <h3>Thumbnail label</h3>
-		        <p>...</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-		      </div>
-		    </div>
-		  </div>
+    <!-- start main content -->    
+    <div class="main_content">
+		<div class="container">
+			<div class="row">
+			  <div class="col-sm-6 col-md-4">
+			    <div class="thumbnail">
+			      <img src="img/Maltese_Child.jpg" alt="..." class="img-responsive img-rounded">
+			      <div class="caption">
+			        <h3>玛尔济斯</h3>
+			        <p>一种白色长毛的小型玩赏犬，性情温和，外表可爱，撒娇好客，因此十分受到人们的喜爱，是很受欢迎的狗品种之一，广泛饲养于世界各地。</p>
+			        <p><a href="https://zh.wikipedia.org/wiki/玛尔济斯" class="btn btn-primary" role="button">详细</a></p>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-6 col-md-4">
+			    <div class="thumbnail">
+			      <img src="img/llw.png" alt="..." class="img-responsive img-rounded">
+			      <div class="caption">
+			        <h3>中国沙皮狗</h3>
+			        <p>传统中国沙皮犬（骨嘴）、混血型沙皮狗（肉嘴）。传统中国沙皮犬 起源于中国南方，可追溯至汉代，有二千多年的历史。在发掘一些汉代时期的墓穴，经常都会发现类似传统中国沙皮犬型态的陶俑（陶犬）出现，在1920年代的广东被人用作斗狗.</p>
+			        <p><a href="https://zh.wikipedia.org/wiki/中国沙皮狗" class="btn btn-primary" role="button">详细</a></p>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-6 col-md-4">
+			    <div class="thumbnail">
+			      <img src="img/Labrador_Retriever-holalau-20130201.jpg" alt="..." class="img-responsive img-rounded">
+			      <div class="caption">
+			        <h3>拉布拉多犬</h3>
+			        <p>拉布拉多拾猎犬（简称拉布拉多；英语：Labrador Retriever）是一种中大型犬类，天生个性温和、活泼、没有攻击性和智能高，是适合被选作导盲犬或其他工作犬的狗品种，跟黄金猎犬、哈士奇并列三大无攻击性犬类之一。在美国犬业俱乐部中拉布拉多是目前登记数量最多的品种。</p>
+			        <p><a href="https://zh.wikipedia.org/wiki/拉布拉多犬" class="btn btn-primary" role="button">详细</a></p>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-6 col-md-4">
+			    <div class="thumbnail">
+			      <img src="img/12.png" alt="..." class="img-responsive img-rounded">
+			      <div class="caption">
+			        <h3>金毛寻回犬</h3>
+			        <p>它是最常见的家犬之一，因为它很容易养，有耐心并且对主人要求不多，只要定期的运动，食物和兽医体检就可以了。金毛寻回犬的独特之处在于它讨人喜欢的性格。</p>
+			        <p><a href="https://zh.wikipedia.org/wiki/金毛寻回犬" class="btn btn-primary" role="button">详细</a></p>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-6 col-md-4">
+			    <div class="thumbnail">
+			      <img src="img/20080420_LunaHallett.jpg" alt="..." class="img-responsive img-rounded">
+			      <div class="caption">
+			        <h3>雪纳瑞</h3>
+			        <p>又称史纳莎，是一种原产于德国的犬种。其名称在德语的意思为八字胡，因为此犬种的特征在于其鼻子周围有很长的毛覆盖住,常见的毛色有黑色及银灰等。</p>
+			        <p><a href="https://zh.wikipedia.org/wiki/雪纳瑞" class="btn btn-primary" role="button">详细</a></p>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-6 col-md-4">
+			    <div class="thumbnail">
+			      <img src="img/11.jpg" alt="..." class="img-responsive img-rounded">
+			      <div class="caption">
+			        <h3>吉娃娃</h3>
+			        <p>吉娃娃（西班牙语：Chihuahueño，英语：Chihuahua），是世界上最小的犬种之一，以墨西哥奇瓦瓦州命名。</p>
+			        <p><a href="https://zh.wikipedia.org/wiki/吉娃娃" class="btn btn-primary" role="button">详细</a></p>
+			      </div>
+			    </div>
+			  </div> 
+			 
+			</div>
 		</div>
 	</div>
     <!-- stop main content -->
+    <div class="panel-footer">&copy;微笑宠物社区</div>
+
+
 </body>
 </html>

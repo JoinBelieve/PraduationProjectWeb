@@ -3,18 +3,19 @@
 	padding: 0;
 	margin: 0;
 	list-style: none;
+
 }
 .banner{	
 	margin: 0 auto;
 	width: 1400px;
-	height: 800px;
+	height: 600px;
 	position: relative;
 	overflow: hidden;
 	box-shadow: 8px 8px 8px #888;
 	border-radius: 10px;
 }
 .banner .img{
-
+	width: 10000px;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -53,8 +54,12 @@
 	margin-top: -25px;
 	background-color: rgba(0,0,0,0.5);
 	color: #fff;
-	font-size: 24px;
-
+	font-size: 40px;
+	cursor: pointer;
+	display: none;
+}
+.banner:hover .btn{
+	display: block;
 }
 .banner .btn-l{
 	left: 0;
