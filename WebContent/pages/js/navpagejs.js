@@ -2,7 +2,9 @@
  * 
  */
 $(document).ready(function(){
-		$(".banner btn-l").click(function{
-			$(".banner .img").animate({left:1400},500);
+		var i = 0;
+		$(".banner btn-l").click(function(){
+			i++;
+			$(".banner .img").animate({left:-i*1400},500);
 		});
 });
