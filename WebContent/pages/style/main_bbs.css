@@ -1,3 +1,89 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
 .main_container{
 	margin-top: 30px;
 }
+.left_container{
+	border-right: 1px solid #ddd;
+	text-align: left;
+	height: 500px;
+}
+.main_container .left_container ul>li{
+	margin-bottom: 10px;
+}
+.main_container .left_container ul>li>a{
+	text-decoration: none;
+}
+.main_container .left_container .left1>li>a{
+	color: #000;
+}
+.main_container .left_container .left2>li>a{
+	color: #666;
+}
+.main_container .left_container ul>li>a:hover{
+	color: #aaa;
+}
+.left2{
+	margin-top: 30px;
+}
+.contant{
+	position: relative;
+	margin-top: 20px;
+	width: 100%;
+	height: 100px;
+}
+.contant:hover{
+	background-color: #eee;
+	border-radius: 10px;
+	opacity: 0.8;
+
+}
+.contant img{
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	line-height: 100px;
+	top: 25px;
+	left: 20px;
+}
+
+/* .contant span{
+	color: #aaa;
+	position: absolute;
+	bottom: 3px;
+	left: 80px;
+} */
+.contant_div{
+	position: absolute;
+	bottom: 3px;
+	left: 80px;
+}
+
+.label{
+	position: absolute;
+	left: 280px;
+	bottom: 3px;
+}
+.a_badge{
+
+	position: absolute;
+	left: 370px;
+	bottom: 3px;
+}
+.contant .title h3{
+	position: absolute;	
+	font-family: "微软雅黑";
+	color: #000;
+	top: 15px;	
+	left: 100px;
+}
+.contant .title h3:hover{
+	color: #888;
+}
+
+
+
+
